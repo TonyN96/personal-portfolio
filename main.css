@@ -1,9 +1,238 @@
 @charset "utf-8";
+/* CSS DOCUMENT */
 
-a {
-    color: white;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
-a:hover {
-    color: lightblue;
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(251, 251, 251);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    text-shadow: 0 0 5px black;
+    font-size: 80px;
+	font-weight: 700;
+	line-height: 48px;
+    color: white;
+    padding: 30px;
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 40px;
+	font-family: Bitter,serif;
+	color: white;
+	text-shadow: 0 0 5px black;
+    padding: 30px;
+    user-select: none;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+h4 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* CONTAINER CSS */
+
+.container {
+	width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* NAV CSS */
+
+.nav-bar {
+    background: transparent;
+	display: block;
+    max-width: 100%;
+    position: fixed;
+	top:0;
+	right: 0;
+	left: 0;
+	min-height: 60px;
+	line-height: 80px;
+	z-index: 100000;
+}
+
+.nav-links {
+	line-height: 80px;
+    float: right;
+}
+
+.nav-links a {
+    color: white;
+	text-decoration: none;
+	font-family: Nunito,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 15px;
+	line-height: 80px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 20px;
+	text-transform: uppercase;
+}
+
+ul.nav a:hover {
+	color: lightgray;
+	transition: all .5s;
+}
+
+.nav-icon {
+    padding-right: 5px;
+}
+
+li {
+	display: inline;
+}
+
+/* HEADER CSS */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-image: url("img/paris-sky.jpg");
+	background-position: center 70%;
+	background-repeat: none;
+	background-attachment: fixed;
+	height: 100vh;
+    background-size: cover;
+    text-align: center;
+}
+
+.see-my-work {
+    background: #ec4561;
+	color: white;
+	text-transform: uppercase;
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+	padding: 10px 16px;
+	font-size: 18px;
+	margin-top: 50px;
+	border-radius: 6px;
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+	text-decoration: none;
+	transition: .5s;
+}
+
+.see-my-work:hover {
+    background-color:#E31739;
+	transition: .5s;
+}
+
+/* ABOUT CSS */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait {
+    width: 25%;
+    height: auto;
+    padding: 0% 12.5%;
+    border-radius: 50%;
+}
+
+.bio {
+    margin: 50px 0px;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.7em;
+    font-weight: 400;
+	color: #777;
+}
+
+/* PROJECTS CSS */
+
+.projects {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    grid-row-gap: 30px;
+}
+
+.grid-item {
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 4px 0px;
+    background-color: transparent;
+    height: 200px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.project-desc {
+    padding: 20px 0px;
+    color: rgb(112, 112, 112);
+    font-size: 1.1em;
+}
+
+.project-icon {
+    font-size: 1.4em;
+}
+
+/* EDUCATION CSS */
+
+.education-item {
+    margin: 80px 0px;
+}
+
+.image-container {
+	width: 150px;
+	height: 150px;
+	border: 7px solid #e6e6e3;
+	border-radius: 100%;
+    background-color: #e6e6e3;
+    float: left;
+    margin-right: 40px;
+}
+
+.img-circle {
+	border-radius: 50%;
+	width: 150px;
+	height: auto;
+	border: 0;
+}
+
+/* FOOTER CSS */
+
+footer {
+    text-align: center;
+    background-color: #437278;
+    color: white;
+	padding: 10px;
+	font-size: 14px;
+	text-align: center;
+	font-family: "Inter", Helvetica, sans-serif;
 }
