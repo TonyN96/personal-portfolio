@@ -183,7 +183,7 @@ header {
 .grid-item {
     box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 4px 0px;
     height: 10em;
-    padding: 20px;
+    padding: 1em;
     overflow: hidden;
     font-size: 1.1em;
     position: relative;
@@ -269,6 +269,10 @@ footer .footer-content {
     padding: 3em 0em;
 }
 
+.footer-text {
+    max-width: 70%;
+}
+
 #copyright {
     font-size: 0.8em;
     font-weight: 400;
@@ -313,22 +317,53 @@ footer .social-icons a {
         font-size: 2em;
     }
 
+    section {
+        padding-top: 3.5em;
+    }
+
     .social-icons a {
         font-size: 1.5em;
     }
 
-    h5 {
-        font-size: 1.4em;
-    }
-
-    #copyright {
-        font-size: 0.6em;
+    h4 {
+        font-size: 0.9em;
     }
 
     .see-my-work {
         padding: 0.5em 1.5em;
         font-size: 1.1em;
     }
+    
+    
+}
+
+@media only screen and (max-width: 600px) {
+    
+    h3 {
+        font-size: 1.6em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    .grid-item {
+        font-size: 0.9em;
+    }
+
+    .portrait {
+        width: 50%;
+    }
+
+    .about-me-text p {
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+
+    .footer-content {
+        font-size: 0.9em;
+    }
+
 }
 
 @media only screen and (max-width: 414px) {
@@ -348,5 +383,17 @@ footer .social-icons a {
         padding: 0.5em 1.3em;
         font-size: 0.9em;
         font-weight: 500;
+    }
+
+    .portfolio {
+        grid-template-columns: 100%;
+    }
+
+    .portrait {
+        width: 70%;
+    }
+
+    footer .social-icons a {
+        padding: 0 0em 0 0.3em;
     }
 }
