@@ -27,14 +27,14 @@ h1 {
     user-select: none;
     font-size: 4.5em;
 	font-weight: bold;
-    color: white;
+    color: rgb(251, 251, 251);
 }
 
 h2 {
 	font-size: 2.5em;
     font-weight: 500;
 	font-family: "Inter", Helvetica, sans-serif;
-	color: white;
+	color: rgb(251, 251, 251);
     user-select: none;
     padding-top: 0.3em;
     padding-bottom: 1em;
@@ -60,7 +60,7 @@ h5 {
 }
 
 section {
-    margin-top: 5em;
+    padding-top: 5em;
     display: block;
     overflow: auto;
 }
@@ -123,7 +123,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-	background-image: url("img/paris-sky.jpg");
+	background-image: url("img/sky-gradient-1.jpg");
 	background-position: center 70%;
 	background-repeat: none;
 	background-attachment: fixed;
@@ -141,14 +141,20 @@ header {
 }
 
 .social-icons a {
-    color: white;
+    color: rgb(251, 251, 251);
     font-size: 2em;
     padding-right: .5em;
+    transition: 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: rgb(226, 226, 226);
+    transition: 0.2s ease;
 }
 
 .see-my-work {
     background: #ec4561;
-	color: white;
+	color: rgb(251, 251, 251);
 	padding: 0.5em 2em;
     font-size: 1.2em;
     font-weight: 500;
@@ -193,7 +199,7 @@ header {
     grid-template-columns: 32% 32% 32%;
     grid-column-gap: 2%;
     grid-row-gap: 30px;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 }
 
 .grid-item {
@@ -239,26 +245,23 @@ header {
 /* FOOTER CSS */
 
 footer {
-    background-color: #437278;
-    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 0;
+    color: rgb(251, 251, 251);
 	padding: 10px;
     font-family: "Inter", Helvetica, sans-serif;
-    height: 120px;
+    margin-top: 5em;
+    background-image: url("img/sky-gradient-1.jpg");
 }
 
-footer .footer-text {
-    float: left;
-    padding: 20px 0px;
-}
-
-footer .social-icons {
-    float: right;
-    padding-top: 40px;
-}
-
-footer .social-icons a {
-    padding-right: 0;
-    padding-left: 0.5em;
+footer .footer-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 3em 0em;
 }
 
 #copyright {
