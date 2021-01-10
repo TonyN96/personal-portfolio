@@ -56,7 +56,7 @@ h4 {
 h5 {
     font-size: 1.7em;
     font-weight: bold;
-    padding-bottom: 20px;
+    padding-bottom: 0.8em;
 }
 
 section {
@@ -136,14 +136,11 @@ header {
     margin-left: 15%;
 }
 
-.social-icons {
-    padding-bottom: 2em;
-}
 
 .social-icons a {
     color: rgb(251, 251, 251);
     font-size: 2em;
-    padding-right: .5em;
+    padding: 0 0.5em 0 0em;
     transition: 0.2s ease;
 }
 
@@ -155,7 +152,8 @@ header {
 .see-my-work {
     background: #ec4561;
 	color: rgb(251, 251, 251);
-	padding: 0.5em 2em;
+    padding: 0.5em 2em;
+    margin-top: 2em;
     font-size: 1.2em;
     font-weight: 500;
 	border-radius: 4px;
@@ -169,26 +167,6 @@ header {
 .see-my-work:hover {
     background-color:#E31739;
 	transition: .5s;
-}
-
-/* ABOUT CSS */
-
-.portrait {
-    float: left;
-    width: 25%;
-    height: auto;
-    padding: 0% 12.5%;
-    border-radius: 50%;
-}
-
-.bio {
-    float: right;
-    max-width: 50%;
-    text-align: left;
-    font-size: 1.1em;
-    line-height: 1.9em;
-    font-weight: 400;
-	color: #777;
 }
 
 /* PORTFOLIO CSS */
@@ -242,6 +220,33 @@ header {
     right: 1.5em
 }
 
+/* ABOUT CSS */
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait {
+    width: 30%;
+    margin: auto;
+    border-radius: 50%;
+    display: block;
+}
+
+.about-me-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.about-me-text p {
+    font-size: 1.1em;
+    line-height: 1.9em;
+    font-weight: 400;
+	color: #777;
+}
+
 /* FOOTER CSS */
 
 footer {
@@ -267,4 +272,81 @@ footer .footer-content {
 #copyright {
     font-size: 0.8em;
     font-weight: 400;
+}
+
+footer .social-icons a {
+    padding: 0 0em 0 0.5em;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px){
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .portfolio {
+        grid-template-columns: 49% 49%;
+    }
+
+    .about-me-content {
+        display: block;
+    }
+
+    .portrait {
+        margin-bottom: 3em;
+    }
+
+    .about-me-text {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.4em;
+    }
+
+    #copyright {
+        font-size: 0.6em;
+    }
+
+    .see-my-work {
+        padding: 0.5em 1.5em;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .details {
+        margin-left: 10%;
+    }
+
+    .see-my-work {
+        padding: 0.5em 1.3em;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
 }
