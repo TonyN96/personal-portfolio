@@ -123,7 +123,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-	background-image: url("img/sky-gradient-1.jpg");
+	background-image: url("img/gradient.jpg");
 	background-position: center 70%;
 	background-repeat: none;
 	background-attachment: fixed;
@@ -259,7 +259,7 @@ footer {
 	padding: 10px;
     font-family: "Inter", Helvetica, sans-serif;
     margin-top: 5em;
-    background-image: url("img/sky-gradient-1.jpg");
+    background-image: url("img/gradient.jpg");
 }
 
 footer .footer-content {
