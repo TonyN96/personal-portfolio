@@ -7,6 +7,10 @@
 	border: 0;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
 html {
 	scroll-behavior: smooth;
 }
@@ -24,7 +28,6 @@ a {
 
 h1 {
     font-family: "Inter", Helvetica, sans-serif;
-    user-select: none;
     font-size: 4.5em;
 	font-weight: bold;
     color: rgb(251, 251, 251);
@@ -35,7 +38,6 @@ h2 {
     font-weight: 500;
 	font-family: "Inter", Helvetica, sans-serif;
 	color: rgb(251, 251, 251);
-    user-select: none;
     padding-top: 0.3em;
     padding-bottom: 1em;
 }
@@ -50,7 +52,7 @@ h3 {
 h4 {
     color: rgba(0, 0, 0, 0.8);
     font-size: 1.1em;
-    margin-top: 10px;
+    padding: 1em;
 }
 
 h5 {
@@ -169,57 +171,6 @@ header {
 	transition: .5s;
 }
 
-/* PORTFOLIO CSS */
-
-.portfolio {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 32% 32% 32%;
-    grid-column-gap: 2%;
-    grid-row-gap: 30px;
-    margin-bottom: 1em;
-}
-
-.grid-item {
-    box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 4px 0px;
-    height: 10em;
-    padding: 1em;
-    overflow: hidden;
-    font-size: 1.1em;
-    position: relative;
-    transition: 0.5s ease;
-}
-
-.grid-item:hover {
-    background-color:rgb(243, 243, 243);
-    transition: 0.5s ease;
-}
-
-.project-desc {
-    padding: 1em 0em;
-    color: rgb(112, 112, 112);
-    font-size: 0.9em;
-}
-
-.grid-item ul {
-    position: absolute;
-    bottom: 1.5em;
-    left: 1em;
-    color: rgb(112, 112, 112);
-    max-width: 75%;
-}
-
-.grid-item li {
-    font-size: 0.9em;
-    padding-right: 1em;
-}
-
-.grid-item i {
-    position: absolute;
-    bottom: 1.5em;
-    right: 1.5em
-}
-
 /* ABOUT CSS */
 
 .about-me-content {
@@ -245,6 +196,46 @@ header {
     line-height: 1.9em;
     font-weight: 400;
 	color: #777;
+}
+
+/* PORTFOLIO CSS */
+
+.portfolio {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 32% 32% 32%;
+    grid-column-gap: 2%;
+    grid-row-gap: 3em;
+    margin-bottom: 1em;
+}
+
+.grid-item {
+    box-shadow: 0 0 20px rgba(0,0,0,.16);
+    height: auto;
+    overflow: hidden;
+    font-size: 1.1em;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.grid-item:hover {
+    background-color:rgb(243, 243, 243);
+    transition: 0.5s ease;
+}
+
+.grid-item .project-desc {
+    padding: 1em;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.grid-item .tags {
+    color: rgb(112, 112, 112);
+    padding-top: 2.5em;
+}
+
+.grid-item .tags li {
+    padding-right: 1em;
 }
 
 /* FOOTER CSS */
