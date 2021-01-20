@@ -1,21 +1,82 @@
-const toggleModalBg = () => {
-    document.querySelector('.modal-bg')
-    .classList.toggle('modal-bg-hidden');
+var modalBg = document.getElementsByClassName('modal-bg');
+var modal = document.getElementsByClassName('modal');
+var modalContents = document.getElementsByClassName('modal-contents');
+var portfolioItem = document.getElementsByClassName("portfolio-item");
+var close = document.getElementsByClassName("close-modal");
+
+function openModal() {
+    modalBg[0].style.display = "block";
+    modal[0].style.display = "flex";
 }
 
-const toggleModal = () => {
-    document.querySelector('.modal')
-    .classList.toggle('modal-hidden');
+function closeModal() {
+    modalBg[0].style.display = "none";
+    modal[0].style.display = "none";
 }
 
-document.querySelector('#portfolio-item-1')
-.addEventListener('click', () => {
-    toggleModalBg();
-    toggleModal();
-} );
+portfolioItem[0].onclick = function() {
+    openModal();
+    modalContents[0].style.display = "block";
+}
 
-document.querySelector('#close-modal')
-.addEventListener('click', () => {
-    toggleModalBg();
-    toggleModal();
-});
+portfolioItem[1].onclick = function() {
+    openModal();
+    modalContents[1].style.display = "block";
+}
+
+portfolioItem[2].onclick = function() {
+    openModal();
+    modalContents[2].style.display = "block";
+}
+
+portfolioItem[3].onclick = function() {
+    openModal();
+    modalContents[3].style.display = "block";
+}
+
+portfolioItem[4].onclick = function() {
+    openModal();
+    modalContents[4].style.display = "block";
+}
+
+portfolioItem[5].onclick = function() {
+    openModal();
+    modalContents[5].style.display = "block";
+}
+
+close[0].onclick = function() {
+    closeModal();
+    modalContents[0].style.display = "none";
+}
+
+close[1].onclick = function() {
+    closeModal();
+    modalContents[1].style.display = "none";
+}
+
+close[2].onclick = function() {
+    closeModal();
+    modalContents[2].style.display = "none";
+}
+
+close[3].onclick = function() {
+    closeModal();
+    modalContents[3].style.display = "none";
+}
+
+close[4].onclick = function() {
+    closeModal();
+    modalContents[4].style.display = "none";
+}
+close[5].onclick = function() {
+    closeModal();
+    modalContents[5].style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modalContents) {
+        modalBg.style.display = "none";
+        modal.style.display = "none";
+        modalContents.style.display = "none";
+    }
+}
