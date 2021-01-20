@@ -17,8 +17,8 @@ html {
 
 body {
     font-family: "Inter", Helvetica, sans-serif;
-    color: rgba(0, 0, 0, 0.8);
-    background-color: rgb(251, 251, 251);
+    color: #272f42;
+    background-color: #fbfbfb;
 }
 
 a {
@@ -30,14 +30,14 @@ h1 {
     font-family: "Inter", Helvetica, sans-serif;
     font-size: 4.5em;
 	font-weight: bold;
-    color: rgb(251, 251, 251);
+    color: #272f42;
 }
 
 h2 {
 	font-size: 2.5em;
     font-weight: 500;
 	font-family: "Inter", Helvetica, sans-serif;
-	color: rgb(251, 251, 251);
+	color: #272f42;
     padding-top: 0.3em;
     padding-bottom: 1em;
 }
@@ -47,6 +47,7 @@ h3 {
     font-size: 2.0em;
     font-weight: bold;
     padding-bottom: 0.8em;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 h4 {
@@ -59,6 +60,10 @@ h5 {
     font-size: 1.7em;
     font-weight: bold;
     padding-bottom: 0.8em;
+}
+
+li {
+    display: inline;
 }
 
 section {
@@ -76,84 +81,34 @@ section {
 	margin-left: auto;
 }
 
-/* NAV */
+/* HERO */
 
-.nav-bar {
-    background: transparent;
-	display: block;
-    max-width: 100%;
-    position: absolute;
-	top:0;
-	right: 0;
-	left: 0;
-	height: 80px;
-	line-height: 80px;
-	z-index: 100000;
-}
-
-.nav-links {
-	line-height: 80px;
-    float: right;
-}
-
-.nav-links a {
-    color: white;
-	text-decoration: none;
-	font-family: "Inter", Helvetica, sans-serif;
-	font-size: 1.2em;
-	line-height: 80px;
-	letter-spacing: 1px;
-	padding: 20px;
-}
-
-ul.nav a:hover {
-	color: lightgray;
-	transition: all .5s;
-}
-
-.nav-icon {
-    padding-right: 10px;
-}
-
-li {
-	display: inline;
-}
-
-/* HEADER */
-
-header {
+.hero {
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-	background-image: url("img/gradient.jpg");
-	background-position: center 70%;
-	background-repeat: none;
-	background-attachment: fixed;
-	height: 100vh;
-    background-size: cover;
+	background-color: #85e5ec;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23fbfbfb' fill-opacity='0.2'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    height: 100vh;
+    background-size: 5%;
     text-align: left;
+    color: #272f42;
 }
 
 .details {
     margin-left: 15%;
 }
 
-
 .social-icons a {
-    color: rgb(251, 251, 251);
+    color: #272f42;;
     font-size: 2em;
     padding: 0 0.5em 0 0em;
     transition: 0.2s ease;
 }
 
-.social-icons a:hover {
-    color: rgb(226, 226, 226);
-    transition: 0.2s ease;
-}
-
 .see-my-work {
-    background: #ec4561;
-	color: rgb(251, 251, 251);
+    background: #fbfbfb;
     padding: 0.5em 2em;
     margin-top: 2em;
     font-size: 1.2em;
@@ -163,12 +118,12 @@ header {
 	cursor: pointer;
 	user-select: none;
 	text-decoration: none;
-	transition: .5s;
+	transition: .2s ease-in-out;
 }
 
 .see-my-work:hover {
-    background-color:#E31739;
-	transition: .5s;
+    background-color: #fbfbfbbe;
+	transition: .2s ease-in-out;
 }
 
 /* ABOUT */
@@ -219,9 +174,8 @@ header {
     cursor: pointer;
 }
 
-.portfolio-item:hover {
-    background-color:rgb(243, 243, 243);
-    transition: 0.5s ease;
+.portfolio-item:hover h4 {
+    color: #647fba;
 }
 
 .portfolio-item .project-desc {
@@ -276,6 +230,12 @@ header {
 .modal i {
     cursor: pointer;
     margin-bottom: 0.5em;
+    transition: 0.2s ease-in-out;
+}
+
+.modal i:hover {
+    color: #647fba;
+    transition: 0.2s ease-in-out;
 }
 
 .modal li {
@@ -284,21 +244,37 @@ header {
 }
 
 .modal p {
-    padding: 2.5em;
+    padding: 2.5rem;
+}
+
+.modal .github-link {
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal a {
+    transition: 0.2s ease-in-out;
+}
+
+.modal a:hover {
+    color: #647fba;
+    font-size: 1.1em;
+    transition: 0.2s ease-in-out;
 }
 
 /* FOOTER */
 
 footer {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     bottom: 0;
-    color: rgb(251, 251, 251);
+    color: #272f42;
 	padding: 10px;
     font-family: "Inter", Helvetica, sans-serif;
     margin-top: 5em;
-    background-image: url("img/gradient.jpg");
+    background-color: #85e5ec;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23fbfbfb' fill-opacity='0.2'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 5%;
 }
 
 footer .footer-content {
@@ -317,8 +293,12 @@ footer .footer-content {
     font-weight: 400;
 }
 
+footer .social-icons {
+    margin-bottom: 2em;
+}
+
 footer .social-icons a {
-    padding: 0 0em 0 0.5em;
+    padding: 0 0 0 0.5em;
 }
 
 /* MEDIA QUERIES */
