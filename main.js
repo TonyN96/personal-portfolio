@@ -29,21 +29,6 @@ portfolioItem[2].onclick = function() {
     modalContents[2].style.display = "block";
 }
 
-portfolioItem[3].onclick = function() {
-    openModal();
-    modalContents[3].style.display = "block";
-}
-
-portfolioItem[4].onclick = function() {
-    openModal();
-    modalContents[4].style.display = "block";
-}
-
-portfolioItem[5].onclick = function() {
-    openModal();
-    modalContents[5].style.display = "block";
-}
-
 close[0].onclick = function() {
     closeModal();
     modalContents[0].style.display = "none";
@@ -57,20 +42,6 @@ close[1].onclick = function() {
 close[2].onclick = function() {
     closeModal();
     modalContents[2].style.display = "none";
-}
-
-close[3].onclick = function() {
-    closeModal();
-    modalContents[3].style.display = "none";
-}
-
-close[4].onclick = function() {
-    closeModal();
-    modalContents[4].style.display = "none";
-}
-close[5].onclick = function() {
-    closeModal();
-    modalContents[5].style.display = "none";
 }
 
 window.onclick = function(event) {
