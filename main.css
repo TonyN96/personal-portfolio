@@ -21,7 +21,8 @@ body {
     font-family: "Inter", Helvetica, sans-serif;
     color: #272f42;
     background-color: #fbfbfb;
-    margin: 0 0 300px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 a {
@@ -30,24 +31,19 @@ a {
 }
 
 h1 {
-    font-family: "Inter", Helvetica, sans-serif;
-    font-size: 4.5em;
+    font-size: 72px;
 	font-weight: bold;
-    color: #272f42;
 }
 
 h2 {
-	font-size: 2.5em;
+	font-size: 40px;
     font-weight: 500;
-	font-family: "Inter", Helvetica, sans-serif;
-	color: #272f42;
-    padding-top: 0.3em;
+    padding-top: 0.2em;
     padding-bottom: 1em;
 }
 
 h3 {
-    font-family: "Inter", Helvetica, sans-serif;
-    font-size: 2.0em;
+    font-size: 36px;
     font-weight: bold;
     padding-bottom: 0.8em;
     color: rgba(0, 0, 0, 0.8);
@@ -55,14 +51,7 @@ h3 {
 
 h4 {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 1.1em;
-    padding: 1em;
-}
-
-h5 {
-    font-size: 1.7em;
-    font-weight: bold;
-    padding-bottom: 0.8em;
+    font-size: 18px;
 }
 
 li {
@@ -87,7 +76,6 @@ section {
 /* HERO */
 
 .hero {
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,8 +83,6 @@ section {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23fbfbfb' fill-opacity='0.2'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     height: 100vh;
     background-size: 5em;
-    text-align: left;
-    color: #272f42;
 }
 
 .details {
@@ -105,7 +91,7 @@ section {
 
 .social-icons a {
     color: #272f42;;
-    font-size: 2em;
+    font-size: 36px;
     padding: 0 0.5em 0 0em;
     transition: 0.2s ease;
 }
@@ -114,19 +100,17 @@ section {
     background: #fbfbfb;
     padding: 0.5em 2em;
     margin-top: 2em;
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 20px;
 	border-radius: 4px;
-	display: inline-block;
 	cursor: pointer;
 	user-select: none;
 	text-decoration: none;
-	transition: .2s ease-in-out;
+	transition: 0.2s ease-in-out;
 }
 
 .see-my-work:hover {
     background-color: #fbfbfbbe;
-	transition: .2s ease-in-out;
+	transition: 0.2s ease-in-out;
 }
 
 /* ABOUT */
@@ -146,56 +130,49 @@ section {
 
 .about-me-text {
     max-width: 50%;
-    text-align: left;
 }
 
 .about-me-text p {
-    font-size: 1.1em;
-    line-height: 1.9em;
-    font-weight: 400;
-	color: #777;
+	color: rgb(112, 112, 112);
 }
 
 /* PORTFOLIO */
 
-.portfolio {
+.portfolio-grid {
     display: grid;
     width: 100%;
     grid-template-columns: 32% 32% 32%;
     grid-column-gap: 2%;
-    grid-row-gap: 3em;
-    margin-bottom: 1em;
+    grid-row-gap: 1.5em;
+    margin-bottom: 5em;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .portfolio-item {
-    box-shadow: 0 0 20px rgba(0,0,0,.1);
-    height: auto;
-    overflow: hidden;
-    font-size: 1.1em;
     position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    overflow: hidden;
     transition: 0.5s ease;
     cursor: pointer;
+    padding: 1em;
 }
 
 .portfolio-item:hover h4 {
     color: #647fba;
 }
 
-.portfolio-item .project-desc {
-    padding: 1em;
-    margin-bottom: 3.5em;
-    font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.8);
+.description {
+    padding: 1em 0 2.5em 0;
 }
 
-.portfolio-item .tags {
-    color: rgb(112, 112, 112);
+.languages {
     position: absolute;
     bottom: 1em;
     left: 1em;
 }
 
-.portfolio-item .tags li {
+.languages li {
+    color: rgb(112, 112, 112);
     padding-right: 1em;
 }
 
@@ -208,13 +185,10 @@ section {
     height: 100%;
     width: 100%;
     display: none;
-    margin: auto;
 }
 
 .modal {
-    text-align: center;
     position: fixed;
-    top: 0;
     display: none;
     align-items: center;
     justify-content: center;
@@ -223,20 +197,31 @@ section {
 }
 
 .modal-contents {
+    text-align: center;
     display: none;
     background-color: rgb(251, 251, 251);
-    padding: 4em 3em;
+    padding: 4em 5%;
     border-radius: 1em;
-    font-size: 1.2em;
+    font-size: 20px;
+    margin: auto;
 }
 
-.modal i {
+.close-modal {
     cursor: pointer;
-    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
 }
 
-.modal i:hover {
+.close-modal:hover {
     color: #647fba;
+}
+
+.modal h4 {
+    font-size: 36px;
+}
+
+.modal .languages {
+    position: static;
+    padding-top: 1em;
 }
 
 .modal li {
@@ -245,14 +230,7 @@ section {
 }
 
 .modal p {
-    padding: 2.5rem;
-}
-
-.modal .github-link {
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 2.5em 0em;
 }
 
 .modal a:hover {
@@ -262,13 +240,11 @@ section {
 /* FOOTER */
 
 footer {
-    position: absolute;
     z-index: -1;
     left: 0;
     bottom: 0;
     height: 300px;
     width: 100%;
-    padding-top: 12em;
     color: #272f42;
     background: url("img/wave.svg");
     background-repeat: no-repeat;
@@ -277,9 +253,7 @@ footer {
 }
 
 .footer-content {
-    position: relative;
-    bottom: 0;
-    left: 0;
+    padding-top: 10em;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -289,9 +263,10 @@ footer {
     max-width: 70%;
 }
 
-#copyright {
-    font-size: 0.8em;
-    font-weight: 400;
+#footer-message {
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 0.6em;
 }
 
 footer .social-icons a {
@@ -307,8 +282,8 @@ footer .social-icons a {
 }
 
 @media only screen and (max-width: 990px) {
-    .portfolio {
-        grid-template-columns: 49% 49%;
+    .portfolio-grid {
+        grid-template-columns: 100%;
     }
 
     .about-me-content {
@@ -322,15 +297,19 @@ footer .social-icons a {
     .about-me-text {
         max-width: 100%;
     }
+
+    .portfolio-grid {
+        margin-bottom: 1em;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 3.5em;
+        font-size: 62px;
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 36px;
     }
 
     section {
@@ -338,26 +317,20 @@ footer .social-icons a {
     }
 
     .social-icons a {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        font-size: 0.9em;
+        font-size: 27px;
     }
 
     .see-my-work {
         padding: 0.5em 1.5em;
-        font-size: 1.1em;
+        font-size: 16px;
     }
-    
-    .modal-contents {
-        padding: 2em 0;
-        font-size: 1em;
-        line-height: 1.4em;
+
+    footer {
+        height: 250px;
     }
-    
-    .modal p {
-        padding: 1.5em 1.5em;
+
+    .footer-content {
+        padding-top: 8em;
     }
 
 }
@@ -365,43 +338,50 @@ footer .social-icons a {
 @media only screen and (max-width: 600px) {
     
     h3 {
-        font-size: 1.6em;
+        font-size: 25px;
     }
 
-    h5 {
-        font-size: 1.2em;
+    h4 {
+        font-size: 16px;
     }
 
-    .grid-item {
-        font-size: 0.9em;
+    body {
+        font-size: 16px;
     }
 
     .portrait {
         width: 50%;
     }
 
-    .about-me-text p {
-        font-size: 1em;
-        line-height: 1.8em;
+    .modal h4 {
+        font-size: 26px;
+    }
+
+    footer {
+        height: 200px;
     }
 
     .footer-content {
-        font-size: 0.9em;
+        padding-top: 6em;
     }
 
-    .modal p {
-        padding: 1.5em 1em;
+    #footer-message {
+        font-size: 20px;
     }
 
 }
 
 @media only screen and (max-width: 414px) {
     h1 {
-        font-size: 2.2em;
+        font-size: 30px;
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 14px;
     }
 
     .details {
@@ -410,16 +390,16 @@ footer .social-icons a {
 
     .see-my-work {
         padding: 0.5em 1.3em;
-        font-size: 0.9em;
+        font-size: 12px;
         font-weight: 500;
-    }
-
-    .portfolio {
-        grid-template-columns: 100%;
     }
 
     .portrait {
         width: 70%;
+    }
+
+    .footer-content {
+        padding-top: 7em;
     }
 
     footer .social-icons a {
