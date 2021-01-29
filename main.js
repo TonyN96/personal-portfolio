@@ -1,15 +1,3 @@
-const user = 'TonyN96';
-const token = 'c2642147e07136ae17240f2e3209d1ed100478dc';
-const creds = `${user}:${token}`;
-const auth = btoa(creds);
-
-const options = {
-    mode: 'cors',
-    headers: {
-        Authorization: 'Basic ' + auth,
-    },
-};
-
 var modalBg = document.getElementsByClassName('modal-bg');
 var modal = document.getElementsByClassName('modal');
 var modalContents = document.getElementsByClassName('modal-contents');
@@ -29,7 +17,7 @@ function loadRepos(repos) {
 }
 
 async function getRepo(repoName, x) {
-    const response = await fetch("https://api.github.com/repos/TonyN96/" + repoName, options);
+    const response = await fetch("https://api.github.com/repos/TonyN96/" + repoName);
     if (response.status != 404) {
         const repo = await response.json();
         renderRepo(repo, x)
@@ -42,7 +30,7 @@ async function renderRepo(repo, x) {
     title.innerHTML = repo.name;
     var description = portfolioItem[x].getElementsByTagName("p")[0];
     description.innerHTML = repo.description;
-    const response = await fetch(repo.languages_url, options);
+    const response = await fetch(repo.languages_url);
     var languagesContainer = portfolioItem[x].getElementsByTagName("ul")[0];
     if (response.status != 404) {
         const languagesJSON = await response.json();
