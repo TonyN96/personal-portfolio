@@ -46,7 +46,7 @@ async function renderModals(repo, x) {
     title.innerHTML = repo.name;
     var description = modalContents[x].getElementsByTagName("p")[0];
     description.innerHTML = repo.description;
-    const response = await fetch(repo.languages_url, options);
+    const response = await fetch(repo.languages_url);
     var languagesContainer = modalContents[x].getElementsByTagName("ul")[0];
     if (response.status != 404) {
         const languagesJSON = await response.json();
