@@ -2,7 +2,7 @@ var modalBg = document.getElementsByClassName('modal-bg');
 var modal = document.getElementsByClassName('modal');
 var modalContents = document.getElementsByClassName('modal-contents');
 var portfolioItem = document.getElementsByClassName("portfolio-item");
-var close = document.getElementsByClassName("close-modal");
+var close = document.getElementsByClassName("close-modal")
 
 function openModal() {
     modalBg[0].style.display = "block";

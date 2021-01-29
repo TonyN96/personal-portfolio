@@ -233,12 +233,10 @@ section {
 .modal i {
     cursor: pointer;
     margin-bottom: 0.5em;
-    transition: 0.2s ease-in-out;
 }
 
 .modal i:hover {
     color: #647fba;
-    transition: 0.2s ease-in-out;
 }
 
 .modal li {
@@ -257,20 +255,15 @@ section {
     align-items: center;
 }
 
-.modal a {
-    transition: 0.2s ease-in-out;
-}
-
 .modal a:hover {
     color: #647fba;
-    font-size: 1.1em;
-    transition: 0.2s ease-in-out;
 }
 
 /* FOOTER */
 
 footer {
     position: absolute;
+    z-index: -1;
     left: 0;
     bottom: 0;
     height: 300px;
