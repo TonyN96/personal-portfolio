@@ -55,8 +55,11 @@ async function renderModals(repo, x) {
             languagesContainer.innerHTML += `<li>${languages[i]}</i>`;
         }
     }
-    const githubLink = modalContents[x].getElementsByClassName("github-link")[0];
-    githubLink.innerHTML = `<a target="_blank" href="${repo.html_url}">View Code <i class="fab fa-github"></i></a>`;
+    const modalLinks = modalContents[x].getElementsByTagName("ul")[1];
+    modalLinks.innerHTML += `<li><a target="_blank" href="${repo.html_url}"><i class="fab fa-github"></i> Code</a></li>`;
+    if (repo.homepage != "") {
+        modalLinks.innerHTML += `<li><a target="_blank" href="${repo.homepage}"><i class="fas fa-link"></i> Live</a></li>`;
+    }
 }
 
 function openModal() {
