@@ -1,8 +1,10 @@
-var modalBg = document.getElementsByClassName('modal-bg');
-var modal = document.getElementsByClassName('modal');
+var modalBg = document.getElementById('modal-bg');
+var modal = document.getElementById('modal');
 var modalContents = document.getElementsByClassName('modal-contents');
 var portfolioItem = document.getElementsByClassName("portfolio-item");
-var close = document.getElementsByClassName("close-modal")
+var closeModalBtn = document.getElementsByClassName("close-modal");
+var portfolioItems = [].slice.call(portfolioItem);
+var closeModalBtns = [].slice.call(closeModalBtn);
 
 var repos = ["fitness-tracker-js", "fitness-tracker-java", "personal-portfolio"]
 
@@ -62,43 +64,17 @@ async function renderModals(repo, x) {
     }
 }
 
-function openModal() {
-    modalBg[0].style.display = "block";
-    modal[0].style.display = "flex";
+function displayModal(item) {
+    modalBg.style.display = "block";
+    modal.style.display = "flex";
+    let index = portfolioItems.indexOf(item);
+    modalContents[index].style.display = "block";
 }
 
-function closeModal() {
-    modalBg[0].style.display = "none";
-    modal[0].style.display = "none";
-}
-
-portfolioItem[0].onclick = function() {
-    openModal();
-    modalContents[0].style.display = "block";
-}
-
-portfolioItem[1].onclick = function() {
-    openModal();
-    modalContents[1].style.display = "block";
-}
-
-portfolioItem[2].onclick = function() {
-    openModal();
-    modalContents[2].style.display = "block";
-}
-
-close[0].onclick = function() {
-    closeModal();
-    modalContents[0].style.display = "none";
-}
-
-close[1].onclick = function() {
-    closeModal();
-    modalContents[1].style.display = "none";
-}
-
-close[2].onclick = function() {
-    closeModal();
-    modalContents[2].style.display = "none";
+function hideModal(item) {
+    modalBg.style.display = "none";
+    modal.style.display = "none";
+    let index = closeModalBtns.indexOf(item);
+    modalContents[index].style.display = "none";
 }
 

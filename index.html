@@ -83,7 +83,7 @@
 
             <grid class="portfolio-grid">
 
-                <div class="portfolio-item">
+                <div class="portfolio-item" onClick="displayModal(this);">
                     <h4></h4>
                     <div>
                         <p class="description"></p>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <div class="portfolio-item" onClick="displayModal(this);">
                     <h4></h4>
                     <div>
                         <p class="description"></p>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <div class="portfolio-item" onClick="displayModal(this);">
                     <h4></h4>
                     <div>
                         <p class="description"></p>
@@ -118,15 +118,15 @@
 
     <!-- MODALS -->
 
-    <div class="modal-bg">
+    <div id="modal-bg">
 
-        <div class="modal">
+        <div id="modal">
 
             <div class="container">
 
                 <div class="modal-contents">
 
-                    <i class="far fa-times-circle fa-4x close-modal"></i>
+                    <i class="far fa-times-circle fa-4x close-modal" onClick="hideModal(this);"></i>
                     <h4></h4>
                     <ul class="languages"></ul>
                     <p class="description"></p>
@@ -136,7 +136,7 @@
 
                 <div class="modal-contents">
 
-                    <i class="far fa-times-circle fa-4x close-modal"></i>
+                    <i class="far fa-times-circle fa-4x close-modal" onClick="hideModal(this);"></i>
                     <h4></h4>
                     <ul class="languages"></ul>
                     <p class="description"></p>
@@ -146,7 +146,7 @@
 
                 <div class="modal-contents">
 
-                    <i class="far fa-times-circle fa-4x close-modal"></i>
+                    <i class="far fa-times-circle fa-4x close-modal" onClick="hideModal(this);"></i>
                     <h4></h4>
                     <ul class="languages"></ul>
                     <p class="description"></p>

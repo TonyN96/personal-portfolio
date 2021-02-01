@@ -178,7 +178,7 @@ section {
 
 /* MODALS */
 
-.modal-bg {
+#modal-bg {
     background: rgba(0,0,0,0.8);
     position: fixed;
     top: 0;
@@ -187,7 +187,7 @@ section {
     display: none;
 }
 
-.modal {
+#modal {
     position: fixed;
     display: none;
     align-items: center;
@@ -215,25 +215,25 @@ section {
     color: #647fba;
 }
 
-.modal h4 {
+#modal h4 {
     font-size: 36px;
 }
 
-.modal .languages {
+#modal .languages {
     position: static;
     padding-top: 1em;
 }
 
-.modal li {
+#modal li {
     color: rgb(112, 112, 112);
     padding: 0.6em;
 }
 
-.modal p {
+#modal p {
     padding: 2.5em 0em;
 }
 
-.modal a:hover {
+#modal a:hover {
     color: #647fba;
 }
 
@@ -353,7 +353,7 @@ footer .social-icons a {
         width: 50%;
     }
 
-    .modal h4 {
+    #modal h4 {
         font-size: 26px;
     }
 
