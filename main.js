@@ -6,7 +6,7 @@ var closeModalBtn = document.getElementsByClassName("close-modal");
 var portfolioItems = [].slice.call(portfolioItem);
 var closeModalBtns = [].slice.call(closeModalBtn);
 
-var repos = ["fitness-tracker-js", "fitness-tracker-java", "personal-portfolio", "football-hub"]
+var repos = ["fitness-tracker-js", "fitness-tracker-java", "european-stadiums", "football-hub"]
 
 window.onload = loadRepos(repos);
 
